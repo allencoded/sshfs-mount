@@ -1,6 +1,6 @@
 {
   "name": "sshfs-mount",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use SSHFS to mount a remote file system over SSH. Only supports public and private keys. Does not support passwords. Currently only OSX support.",
   "main": "index.js",
   "scripts": {
