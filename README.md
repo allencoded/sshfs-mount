@@ -1,4 +1,6 @@
 # sshfs-mount
+[![npm version](https://badge.fury.io/js/sshfs-mount.svg)](https://badge.fury.io/js/sshfs-mount) [![GitHub issues](https://img.shields.io/github/issues/allencoded/sshfs-mount.svg)](https://github.com/allencoded/sshfs-mount/issues)
+
 Use SSHFS to mount your remote file system over SSH. Only supports public and private keys. Does not support passwords.
 
 # Installation
