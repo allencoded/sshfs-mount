@@ -3,6 +3,13 @@
 
 Use SSHFS to mount your remote file system over SSH. Only supports public and private keys. Does not support passwords.
 
+# Requirement
+// Debian/Ubuntu
+```apt-get install sshfs```
+
+// RHEL/CentOS
+```yum install sshfs```
+
 # Installation
 ```npm install sshfs-mount```
 
@@ -15,6 +22,9 @@ sshfs.mount('root', '192.168.0.1', '/Volumes/Allencoded');
 
 // Unmount(umount) Drive
 sshfs.umount('/Volumes/Allencoded');
+
+// Mount Drive with somes SSHFS options
+sshfs.mount('user', 'server', '-p 2222');
 ```
 
 #Author Notes

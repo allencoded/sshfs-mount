@@ -6,11 +6,11 @@ const fs = require('fs');
 exports = module.exports = {};
 
 // mount the drive
-exports.mount = (user, host, mountpoint) => {
+exports.mount = (user, host, mountpoint, options) => {
   validate(user, host, mountpoint);
   mkdir(mountpoint);
 
-  exec(`sshfs ${user}@${host}:/ ${mountpoint}`, (error, stdout, stderr) => {
+  exec(`sshfs ${user}@${host}:/ ${mountpoint} ${options}`, (error, stdout, stderr) => {
       console.log(`${stdout}`);
       console.log(`${stderr}`);
       if (error !== null) {
@@ -42,7 +42,7 @@ let mkdir = (mountpoint) => {
   }
 };
 
-let validate = (user, host, mountpoint) => {
+let validate = (user, host, mountpoint, options) => {
   if (user === null) {
     console.error('user not provided');
   }
@@ -52,4 +52,5 @@ let validate = (user, host, mountpoint) => {
   if (mountpoint === null) {
     console.error('mountpoint not provided');
   }
+  //@TODO: mega job, validate options one by one ?
 };
