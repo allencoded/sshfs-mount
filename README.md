@@ -18,7 +18,7 @@ sshfs.umount('/Volumes/Allencoded');
 ```
 
 #Author Notes
-This is a very early almost release. I couldn't find a recent and still working node sshfs package, so I created my own. I hope to add more options in the near future. I gladly will accept Pull Requests and try my best to quickly review and merge them into master. 
+Please let me know if you find any problems. Also feel free to open any Pull Requests for improvements and I will review them and get them in.
 
 #License
 Copyright (c) 2016, Allen Hendricks

@@ -1,10 +1,10 @@
 {
   "name": "sshfs-mount",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Use SSHFS to mount a remote file system over SSH. Only supports public and private keys. Does not support passwords. Currently only OSX support.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/allencoded/sshfs-mount/issues"
   },
-  "homepage": "https://github.com/allencoded/sshfs-mount#readme"
+  "homepage": "https://github.com/allencoded/sshfs-mount#readme",
+  "devDependencies": {
+    "jest": "^24.5.0"
+  }
 }
