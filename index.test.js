@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const sshfs = require('./index');
 
 test('mount fails with no arguments', () => {
