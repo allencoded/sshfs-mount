@@ -4,7 +4,8 @@
   "description": "Use SSHFS to mount a remote file system over SSH. Only supports public and private keys. Does not support passwords. Currently only OSX support.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
   },
   "homepage": "https://github.com/allencoded/sshfs-mount#readme",
   "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "jest": "^24.5.0"
   }
 }
