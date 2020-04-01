@@ -34,3 +34,5 @@ node_modules
 
 # Ignore MAC DS_Store
 .DS_Store
+
+.idea/
