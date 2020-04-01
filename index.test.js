@@ -1,10 +1,12 @@
 /* eslint-disable no-undef */
 const sshfs = require('./index');
 
-test('mount fails with no arguments', () => {
-  expect(sshfs.mount).toThrow(Error);
-});
+describe('Exceptions test', () => {
+  it('mount fails with no arguments', async () => {
+    await expect(sshfs.mount()).rejects.toThrow();
+  });
 
-test('umount fails with no arguments', () => {
-  expect(sshfs.umount).toThrow(Error);
+  it('umount fails with no arguments', async () => {
+    await expect(sshfs.umount()).rejects.toThrow();
+  });
 });
