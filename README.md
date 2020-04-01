@@ -35,6 +35,8 @@ sshfs.umount('/Volumes/Allencoded');
 sshfs.mount('user', 'server', '-p 2222');
 ```
 
+You can find an example of usage also in the `example.js` file.
+
 ## Author Notes
 Please let me know if you find any problems. Also feel free to open any Pull Requests for improvements and I will review them and get them in.
 
