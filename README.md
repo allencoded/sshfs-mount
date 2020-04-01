@@ -6,6 +6,12 @@ Use SSHFS to mount your remote file system over SSH. Only supports public and pr
 
 ## Requirement
 
+### macOS
+```
+brew cask install osxfuse
+brew install sshfs
+```
+
 ### Debian/Ubuntu
 ```apt-get install sshfs```
 
