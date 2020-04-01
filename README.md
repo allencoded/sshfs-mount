@@ -1,12 +1,27 @@
 # sshfs-mount
-[![npm version](https://badge.fury.io/js/sshfs-mount.svg)](https://badge.fury.io/js/sshfs-mount) [![GitHub issues](https://img.shields.io/github/issues/allencoded/sshfs-mount.svg)](https://github.com/allencoded/sshfs-mount/issues)
+[![npm version](https://badge.fury.io/js/sshfs-mount.svg)](https://badge.fury.io/js/sshfs-mount)
+[![GitHub issues](https://img.shields.io/github/issues/allencoded/sshfs-mount.svg)](https://github.com/allencoded/sshfs-mount/issues)
 
 Use SSHFS to mount your remote file system over SSH. Only supports public and private keys. Does not support passwords.
 
-# Installation
+## Requirement
+
+### macOS
+```
+brew cask install osxfuse
+brew install sshfs
+```
+
+### Debian/Ubuntu
+```apt-get install sshfs```
+
+### RHEL/CentOS
+```yum install sshfs```
+
+## Installation
 ```npm install sshfs-mount```
 
-#Usage
+## Usage
 ```
 var sshfs = require('sshfs-mount');
 
@@ -15,12 +30,20 @@ sshfs.mount('root', '192.168.0.1', '/Volumes/Allencoded');
 
 // Unmount(umount) Drive
 sshfs.umount('/Volumes/Allencoded');
+
+// Mount Drive with somes SSHFS options
+sshfs.mount('user', 'server', { options: '-p 2222' });
+
+// Mount drive specifying host dir
+sshfs.mount('user', 'server', { dir: '/home/user' });
 ```
 
-#Author Notes
+You can find an example of usage also in the `example.js` file.
+
+## Author Notes
 Please let me know if you find any problems. Also feel free to open any Pull Requests for improvements and I will review them and get them in.
 
-#License
+## License
 Copyright (c) 2016, Allen Hendricks
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
