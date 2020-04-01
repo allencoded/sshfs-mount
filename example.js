@@ -18,7 +18,7 @@ function exitHandler(code) {
 async function connect() {
   try {
     // Mount Drive
-    await sshfs.mount('root', '192.168.0.1', mountpoint);
+    await sshfs.mount('root', '192.168.0.1', mountpoint, { dir: '/home/user', options: '-p 2222' });
     console.log('Volume mounted');
 
     process.stdin.resume();

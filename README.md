@@ -32,7 +32,10 @@ sshfs.mount('root', '192.168.0.1', '/Volumes/Allencoded');
 sshfs.umount('/Volumes/Allencoded');
 
 // Mount Drive with somes SSHFS options
-sshfs.mount('user', 'server', '-p 2222');
+sshfs.mount('user', 'server', { options: '-p 2222' });
+
+// Mount drive specifying host dir
+sshfs.mount('user', 'server', { dir: '/home/user' });
 ```
 
 You can find an example of usage also in the `example.js` file.
