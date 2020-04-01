@@ -29,11 +29,11 @@ function validateInput(user, host, mountpoint) {
 }
 
 // mount the drive
-exports.mount = (user, host, mountpoint) => {
+exports.mount = (user, host, mountpoint, options) => {
   validateInput(user, host, mountpoint);
   mkdir(mountpoint);
 
-  exec(`sshfs ${user}@${host}:/ ${mountpoint}`, (error, stdout, stderr) => {
+  exec(`sshfs ${user}@${host}:/ ${mountpoint} ${options}`, (error, stdout, stderr) => {
     if (error) {
       throw new Error(`exec ${error}`);
     }
