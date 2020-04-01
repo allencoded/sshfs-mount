@@ -29,7 +29,7 @@ function validateInput(user, host, mountpoint) {
 }
 
 // mount the drive
-exports.mount = (user, host, mountpoint, options) => new Promise((resolve, reject) => {
+exports.mount = (user, host, mountpoint, options = '') => new Promise((resolve, reject) => {
   validateInput(user, host, mountpoint);
   mkdir(mountpoint);
 
