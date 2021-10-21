@@ -3,17 +3,15 @@ module.exports = {
     commonjs: true,
     es6: true,
     node: true,
+    jest: true,
   },
   extends: [
-    'airbnb-base',
+    'plugin:@typescript-eslint/recommended'
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2018,
-  },
-  rules: {
-  },
-};
+    ecmaVersion: 11,
+    project: './tsconfig.json'
+  }, 
+  project: ['./tsconfig.json']
+}

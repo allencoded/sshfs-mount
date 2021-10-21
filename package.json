@@ -1,11 +1,12 @@
 {
   "name": "sshfs-mount",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Use SSHFS to mount a remote file system over SSH. Only supports public and private keys. Does not support passwords. Currently only OSX support.",
-  "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "lint": "eslint"
+    "build": "tsc",
+    "serve": "node dist/index.js",
+    "start": "npm run serve",
+    "watch": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
     "osx",
     "ssh"
   ],
+  "type": "module",
   "author": "Allen Hendricks",
   "license": "ISC",
   "bugs": {
@@ -26,9 +28,11 @@
   },
   "homepage": "https://github.com/allencoded/sshfs-mount#readme",
   "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.5.0"
-  }
+    "@types/node": "^16.11.2",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.0.1",
+    "typescript": "^4.4.4"
+  },
+  "declaration": true
 }
